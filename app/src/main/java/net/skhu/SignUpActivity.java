@@ -2,6 +2,7 @@ package net.skhu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ public class SignUpActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, MemoActivity.class);
+                startActivity(intent);
                 EditText editText_loginId = (EditText) findViewById(R.id.editText_loginid);
                 String loginId = editText_loginId.getText().toString();
                 if (isEmptyOrWhiteSpace(loginId))
