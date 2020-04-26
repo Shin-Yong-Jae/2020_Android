@@ -16,32 +16,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id =item.getItemId();
-        if(id==R.id.action_signUp){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_signUp) {
             Intent intent = new Intent(this, SignUpActivity.class);
             startActivity(intent);
             return true;
-        }else if(id==R.id.action_memo){
+        } else if (id == R.id.action_memo) {
             Intent intent = new Intent(this, MemoActivity.class);
             startActivity(intent);
             return true;
-        }else if (id == R.id.action_buttons) {
+        } else if (id == R.id.action_buttons) {
             Intent intent = new Intent(this, ButtonsActivity.class);
             startActivity(intent);
             return true;
-        }else if (id == R.id.action_checkboxes) {
+        } else if (id == R.id.action_checkboxes) {
             Intent intent = new Intent(this, CheckboxesActivity.class);
             startActivity(intent);
             return true;
-        }else if (id == R.id.action_spinners) {
+        } else if (id == R.id.action_spinners) {
             Intent intent = new Intent(this, SpinnersActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_alerts) {
+            Intent intent = new Intent(this, AlertsActivity.class);
             startActivity(intent);
             return true;
         }
